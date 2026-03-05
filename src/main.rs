@@ -30,8 +30,7 @@ async fn main(){
     let name= std::io::stdin()
         .lines()
         .next()
-        .expect("Erro ao ler a entrada")
-        .expect("Erro ao ler a entrada");
+        .expect("Erro ao ler a entrada").expect("Erro ao ler a linha");
 
     match buscar_usuario(&name).await {
         Ok(usuario) =>{
